@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<h1>Bank-Gemen</h1>
+<html lang="en">
+<head>  <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Formular</title>
+</head>
+<body>
+
+<div>
+    <h2>Login</h2>
+    <form action="login.php" method="post">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" required>
+
+        <div>
+            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+            <label for="showPassword">Passwort anzeigen</label>
+        </div>
+
+        <button type="submit">Anmelden</button>
+    </form>
+
+    <p><a href="passwort_vergessen.html">Passwort vergessen?</a></p>
+    <p><a href="benutzername_vergessen.html">Benutzernamen vergessen?</a></p>
+</div>
+
+<script>
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
+    }
+</script>
+
+</body>
+</html>
+<p><a href="index.html">Zurück zur Homepage</a></p>
